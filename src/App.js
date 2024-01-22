@@ -1,24 +1,60 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router } from "react-router-dom";
+import Routes from './Routes';
+import { createTheme, ThemeProvider } from '@mui/material';
+
 
 function App() {
+
+  const theme = createTheme({
+    typography: {
+      fontFamily: [
+        'Gilroy-Medium'
+      ].join(','),
+      h6: {
+        color: '#66CD0D',
+      },
+      h5: {
+        color: '#fff', 
+      },
+      h4: {
+        color: '#fff', 
+      },
+      h3: {
+        color: '#fff', 
+      },
+      h2: {
+        color: '#fff', 
+      },
+      body1: {
+        color: '#66CD0D',
+      },
+      subtitle1: {
+        color: '#66CD0D',
+      },
+      subtitle2: {
+        color: '#66CD0D',
+      },
+      caption: {
+        color: '#66CD0D',
+      },
+    },
+    Link: {
+      fontFamily: [
+        'Gilroy-Medium'
+      ].join(','),
+    },
+  });
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+    <Router>
+    <Routes />
+    </Router>
+    </ThemeProvider>
   );
 }
 
