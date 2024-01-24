@@ -14,7 +14,7 @@ export default function Footer() {
         <Box py={5}>
         <Grid container display='flex' justifyContent='space-evenly' p={1} spacing={{lg:0 , md:0, sm:5 , xs:5}}>
 
-        <Grid item xs={12} sm={6} md={6} lg={3} display='flex' justifyContent='end'>
+        <Grid item xs={12} sm={6} md={12} lg={3} display='flex' justifyContent={{lg:'end', md:'start', sm:'end', xs:'center'}}>
           <Stack spacing={1} textAlign='left'>
             <Link href="/" className="header__content__logo">
            <img src={Logo} style={{width:300, height:100 , objectFit:'contain'}} alt='header' />
@@ -23,12 +23,12 @@ export default function Footer() {
           </Grid>      
 
 
-          <Grid item xs={12} sm={6} md={6} lg={3} display='flex' justifyContent='center'>
-          <ul style={{listStyle:'none' , display:'flex' , flexDirection:'column', gap:'10px' , textAlign:'left'}}>
+          <Grid item xs={12} sm={6} md={3} lg={3} display='flex' justifyContent='center' textAlign={{lg:'left', md:'left', sm:'left', xs:'center'}}>
+          <ul style={{listStyle:'none' , display:'flex' , flexDirection:'column', gap:'10px'}}>
            <Typography variant="h3" color="#66CD0D" fontWeight={500} fontSize={21} marginBottom='20px'>Contact Us</Typography>
             <li><Typography fontSize={17} color='#fff'>Email</Typography></li>     
-            <li><Typography fontSize={15} color='#798DA3'>support@ImplementIT.in</Typography></li>  
-            <li><Typography fontSize={15} color='#798DA3'>www.ImplementIT.in</Typography></li>
+            <li><Typography fontSize={15} color='#798DA3'>support@GogreenTec.in</Typography></li>  
+            <li><Typography fontSize={15} color='#798DA3'>www.GoGreenTec.in</Typography></li>
             <li><Typography fontSize={17} color='#fff'>Address</Typography></li>                     
             <li><Typography fontSize={15} color='#798DA3'>21/1223B, Main Road,</Typography></li>  
             <li><Typography fontSize={15} color='#798DA3'>Madhaurvoyal</Typography></li> 
@@ -37,8 +37,8 @@ export default function Footer() {
           </Grid>    
 
 
-          <Grid item xs={12} sm={6} md={6} lg={3} display='flex' justifyContent='center'>
-          <ul style={{listStyle:'none' , display:'flex' , flexDirection:'column', gap:'10px' , textAlign:'left'}}>
+          <Grid item xs={12} sm={6} md={3} lg={3} display='flex' justifyContent='center' textAlign={{lg:'left', md:'left', sm:'left', xs:'center'}}>
+          <ul style={{listStyle:'none' , display:'flex' , flexDirection:'column', gap:'10px' }}>
           <Typography variant="h3" color="#66CD0D"  fontWeight={500} fontSize={21}  marginBottom='20px'>Support</Typography>
           <li><Link onClick={()=>navigate('/')} underline="none" sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Terms Of Use</Typography></Link></li>
           <li><Link onClick={()=>navigate('/')}  underline="none" sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Privacy</Typography></Link></li>           
@@ -49,8 +49,8 @@ export default function Footer() {
           </Grid> 
 
 
-          <Grid item xs={12} sm={6} md={6} lg={3} display='flex' justifyContent='center'>
-          <ul style={{listStyle:'none' , display:'flex' , flexDirection:'column', gap:'10px' , textAlign:'left'}}>
+          <Grid item xs={12} sm={6} md={3} lg={3} display='flex' justifyContent='center' textAlign={{lg:'left', md:'left', sm:'left', xs:'center'}}>
+          <ul style={{listStyle:'none' , display:'flex' , flexDirection:'column', gap:'10px'}}>
           <Typography variant="h3" color="#66CD0D" fontWeight={500} fontSize={21}  marginBottom='20px'>Quick Links</Typography>
           <li><Link onClick={()=>navigate('/')}  underline="none" sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Home</Typography></Link></li>
           <li><Link onClick={()=>navigate('/services')} underline="none"  sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Services</Typography></Link></li>            
@@ -66,7 +66,7 @@ export default function Footer() {
         
    
 
-        <Grid container mt={{lg:5 , md:5, sm:3 , xs:2}} p={1} spacing={1}>
+        <Grid container mt={{lg:5 , md:5, sm:3 , xs:2}} p={1} spacing={2}>
         <Grid item xs={12}  md={6} textAlign='center' justifyContent='center' display='flex'>
         <Typography className='copyright' color='#798DA3'>
         Copyright and Social Links: © {new Date().getFullYear()} GoGreenVerz Tech Solutions

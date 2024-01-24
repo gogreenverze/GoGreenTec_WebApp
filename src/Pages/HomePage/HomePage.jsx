@@ -82,7 +82,14 @@ export default function HomePage() {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 970,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -177,7 +184,7 @@ export default function HomePage() {
         <Box>
         <Typography variant='h6' color='#66CD0D'>SERVICES</Typography>
         </Box>
-        <Box>
+        {/* <Box>
         <Button 
         variant='outlined' 
         sx={{
@@ -189,17 +196,17 @@ export default function HomePage() {
         >
          View All
         </Button>
+        </Box> */}
         </Box>
-        </Box>
-        <Grid container spacing={3} p={2} mt={2}>
+        <Grid container spacing={{lg:3 , md:3 , sm:8 , xs:4}} p={2} mt={2}>
           {
             services && services.map((i, index)=>{
               return(
-              <Grid item xs={12} sm={12} md={3} lg={3} mt={index % 2 !== 0 ? 6 : 0} >
+              <Grid item xs={12} sm={6} md={3} lg={3} className={index % 2 !== 0 ? "OddGrid" : ''} mt={index % 2 !== 0 ? {lg:6, md:6 , sm:0 , xs:0} : {lg:0, md:0 , sm:0 , xs:0}} >
               <Box className='ServiceCard' p={2}>
               {i.icon}
-             <Typography variant='h6' color='#66CD0D'>{i.title}</Typography>
-             <Typography color='#fff' variant='subtitle1'>{i.content}</Typography>
+              <Typography variant='h5' color='#66CD0D'>{i.title}</Typography>
+             <Typography color='#fff' variant='h6' fontSize='1.1rem'>{i.content}</Typography>
               </Box>
            </Grid>
             )})
@@ -213,7 +220,7 @@ export default function HomePage() {
         <Box>
         <Typography variant='h6' color='#66CD0D'>OUR PORTFOLIO</Typography>
         </Box>
-        <Box>
+        {/* <Box>
         <Button 
         variant='outlined' 
         sx={{
@@ -225,17 +232,17 @@ export default function HomePage() {
         >
          View All
         </Button>
+        </Box> */}
         </Box>
-        </Box>
-        <Grid container spacing={3} p={2} mt={2}>
+        <Grid container spacing={{lg:3 , md:3 , sm:8 , xs:4}}  p={2} mt={2}>
           {
             services && services.map((i, index)=>{
               return(
-              <Grid item xs={12} sm={12} md={3} lg={3} mt={index % 2 !== 0 ? 6 : 0} >
+                <Grid item xs={12} sm={6} md={3} lg={3} className={index % 2 !== 0 ? "OddGrid" : ''} >
               <Box className='ServiceCard' p={2}>
               {i.icon}
-             <Typography variant='h6' color='#66CD0D'>{i.title}</Typography>
-             <Typography color='#fff' variant='subtitle1'>{i.content}</Typography>
+             <Typography variant='h5' color='#66CD0D'>{i.title}</Typography>
+             <Typography color='#fff' variant='h6' fontSize='1.1rem'>{i.content}</Typography>
               </Box>
            </Grid>
             )})
@@ -248,7 +255,7 @@ export default function HomePage() {
         <Box textAlign='left'>
         <Typography variant='h6' color='#66CD0D'>TESTIMONIALS</Typography>
         </Box>
-        <Grid container spacing={3} p={2} mt={2}>
+        <Grid container p={{lg:2 , md:2 , sm:1 , xs:1}} mt={2}>
           <Grid item xs={12}>
           <Box>
           <Slider {...settings}>
@@ -259,14 +266,14 @@ export default function HomePage() {
         </Grid>
       </Box>
 
-
-      <Box position='relative' px={8} py={8}>
+ 
+        <Box position='relative' px={{lg:8 , md:6 , sm:5 , xs:2}} py={8}>
           <Box className='newsletterCard'>
-          <Grid container justifyContent='space-between' alignContent='center' alignItems='center'  px={4} py={10}>
-          <Grid item xs={12} sm={12} md={5} lg={5} display='flex' justifyContent='center'>
-            <Stack spacing={4} width='50%'> 
+          <Grid container justifyContent='space-between' alignContent='center' alignItems='center'  px={{lg:4 , md:4 , sm:2, xs:1}} py={{lg:10, md:10, sm:8, xs:7}}>
+          <Grid item xs={12} sm={12} md={5} lg={5} display='flex' justifyContent='center' mb={{lg:0 , md:0, sm:2 , xs: 2}}>
+            <Stack spacing={{lg:4 ,md:4 ,sm:3 , xs: 2}} width={{lg:'50%', md:'60%', sm:'80%', xs:'100%'}}> 
             <Typography variant='subtitle1'>NEWSLETTER SIGNUP</Typography>
-            <Box>
+            <Box width='100%'>
             <Typography variant='h4'>Subscribe For</Typography>
             <Typography variant='h4'>the Updates!</Typography>
             </Box>
