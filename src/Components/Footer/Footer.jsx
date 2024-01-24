@@ -8,6 +8,16 @@ export default function Footer() {
 
     const navigate = useNavigate();
 
+    const smoothScrollTo = (elementId) => {
+      const targetElement = document.getElementById(elementId);
+      if (targetElement) {
+          window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: "smooth",
+          });
+      }
+  };
+
   return (
     <Box bgcolor='#09121D'>
 
@@ -23,7 +33,7 @@ export default function Footer() {
           </Grid>      
 
 
-          <Grid item xs={12} sm={6} md={3} lg={3} display='flex' justifyContent='center' textAlign={{lg:'left', md:'left', sm:'left', xs:'center'}}>
+          <Grid  id='contactSection' item xs={12} sm={6} md={3} lg={3} display='flex' justifyContent='center' textAlign={{lg:'left', md:'left', sm:'left', xs:'center'}}>
           <ul style={{listStyle:'none' , display:'flex' , flexDirection:'column', gap:'10px'}}>
            <Typography variant="h3" color="#66CD0D" fontWeight={500} fontSize={21} marginBottom='20px'>Contact Us</Typography>
             <li><Typography fontSize={17} color='#fff'>Email</Typography></li>     
@@ -42,7 +52,7 @@ export default function Footer() {
           <Typography variant="h3" color="#66CD0D"  fontWeight={500} fontSize={21}  marginBottom='20px'>Support</Typography>
           <li><Link onClick={()=>navigate('/')} underline="none" sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Terms Of Use</Typography></Link></li>
           <li><Link onClick={()=>navigate('/')}  underline="none" sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Privacy</Typography></Link></li>           
-          <li><Link onClick={()=>navigate('/contact')}  underline="none"  sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Contact</Typography></Link></li>           
+          <li><Link onClick={() => smoothScrollTo("contactSection")} underline="none"  sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Contact</Typography></Link></li>           
           <li><Link  onClick={()=>navigate('/')} underline="none"  sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>FAQ</Typography></Link></li>           
           </ul>
 
@@ -52,10 +62,11 @@ export default function Footer() {
           <Grid item xs={12} sm={6} md={3} lg={3} display='flex' justifyContent='center' textAlign={{lg:'left', md:'left', sm:'left', xs:'center'}}>
           <ul style={{listStyle:'none' , display:'flex' , flexDirection:'column', gap:'10px'}}>
           <Typography variant="h3" color="#66CD0D" fontWeight={500} fontSize={21}  marginBottom='20px'>Quick Links</Typography>
-          <li><Link onClick={()=>navigate('/')}  underline="none" sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Home</Typography></Link></li>
-          <li><Link onClick={()=>navigate('/services')} underline="none"  sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Services</Typography></Link></li>            
-          <li><Link onClick={()=>navigate('/products')}  underline="none" sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Portfolio</Typography></Link></li>            
-          <li><Link onClick={()=>navigate('/about')} underline="none"  sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Blog</Typography></Link></li>                       
+          <li><Link onClick={() => smoothScrollTo("homeSection")}  underline="none" sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Home</Typography></Link></li>
+          <li><Link onClick={() => smoothScrollTo("aboutSection")} underline="none"  sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>About</Typography></Link></li>            
+          <li><Link onClick={() => smoothScrollTo("serviceSection")} underline="none"  sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Services</Typography></Link></li>            
+          <li><Link onClick={() => smoothScrollTo("profileSection")}  underline="none" sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Portfolio</Typography></Link></li>            
+          <li><Link onClick={() => smoothScrollTo("blogSection")} underline="none"  sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Blog</Typography></Link></li>                       
           </ul>
           </Grid> 
           </Grid>      

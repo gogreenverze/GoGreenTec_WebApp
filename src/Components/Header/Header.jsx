@@ -12,15 +12,27 @@ export default function Header() {
 		);
 	};
 
+	const smoothScrollTo = (elementId) => {
+        const targetElement = document.getElementById(elementId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: "smooth",
+            });
+            showNavbar(); // Hide the navbar after clicking on a link
+        }
+    };
+
 	return (
 		<header>
 			<img src={Logo} alt='logo' className="logoImage" />
 			<nav ref={navRef}>
-				<a href="/#">Home</a>
-				<a href="/#">Services</a>
-				<a href="/#">Portfolio</a>
-				<a href="/#">Contact</a>
-                <a href="/#">Blog</a>
+				<a onClick={() => smoothScrollTo("homeSection")}>Home</a>
+				<a onClick={() => smoothScrollTo("aboutSection")}>About</a>
+				<a onClick={() => smoothScrollTo("serviceSection")}>Services</a>
+				<a onClick={() => smoothScrollTo("profileSection")}>Portfolio</a>
+				<a onClick={() => smoothScrollTo("blogSection")}>Blog</a>
+				<a onClick={() => smoothScrollTo("contactSection")}>Contact</a>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>

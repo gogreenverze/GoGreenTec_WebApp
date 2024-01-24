@@ -137,16 +137,16 @@ export default function HomePage() {
   return (
     <Box bgcolor='#000E19'>
 
-      <Box className='Banner' position='relative'>
+      <Box className='Banner' position='relative' id='homeSection'>
       <Header />
 
-      <Box className='bannerText'>
+      <Box className='bannerText' >
         <Typography variant='h3'>Elevate Your Digital Presence with GoGreenVerz</Typography>
         <Typography variant='h6'>Tech Innovations Shaping a Sustainable Future</Typography>
       </Box>
       </Box>
 
-      <Box position='relative' px={3} py={8}>
+      <Box position='relative' px={3} py={8} id='aboutSection'>
         <Grid container>
           <Grid item xs={12} sm={12} md={6} lg={6}>
               <Stack direction='row'>
@@ -165,13 +165,14 @@ export default function HomePage() {
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={6}>
             <Stack spacing={4}>
-              <Typography variant='h6' color='#66CD0D'>WELCOME</Typography>
+              <Typography variant='h6' color='#66CD0D'>OUR STORY</Typography>
               <Stack spacing={2}>
-              <Typography variant='h5'>WELCOME</Typography>
               <Typography variant='subtitle1' color='#fff'>GO Greenverz is a technology company commited to develop an Ecosystem for a Sustainable Future through the development and implementation of green technology solutions. By leveraging blockchain and IoT sensors, we work with the Carbon Registry of India to create verified carbon credits, streamline the methodlogy and claim processes. Our goal is to support businesses and individuals in their efforts to reduce their carbon footprint and contribute to a healtheir planet.</Typography>
-               <Box>
+              
+              <Typography variant='subtitle1' color='#fff'>GO Greenverz is a technology company commited to develop an Ecosystem for a Sustainable Future through the development and implementation of green technology solutions. By leveraging blockchain and IoT sensors, we work with the Carbon Registry of India to create verified carbon credits, streamline the methodlogy and claim processes. Our goal is to support businesses and individuals in their efforts to reduce their carbon footprint and contribute to a healtheir planet.</Typography>
+               {/* <Box>
                <Button variant='outlined' sx={{color:'#66CD0D' , borderColor:"#66CD0D" , borderRadius:'25px' , textTransform:'capitalize', fontSize:'21px'}}>More About Us</Button>
-               </Box>
+               </Box> */}
               </Stack>
             </Stack>
             </Grid>
@@ -179,7 +180,7 @@ export default function HomePage() {
       </Box>
 
 
-      <Box position='relative' px={3} py={8}>
+      <Box position='relative' px={3} py={8} id='serviceSection'>
         <Box display='flex' flexDirection='row' justifyContent='space-between'>
         <Box>
         <Typography variant='h6' color='#66CD0D'>SERVICES</Typography>
@@ -215,7 +216,7 @@ export default function HomePage() {
       </Box>
 
 
-      <Box position='relative' px={3} py={8}>
+      <Box position='relative' px={3} py={8} id='profileSection'>
         <Box display='flex' flexDirection='row' justifyContent='space-between'>
         <Box>
         <Typography variant='h6' color='#66CD0D'>OUR PORTFOLIO</Typography>
@@ -251,7 +252,7 @@ export default function HomePage() {
       </Box>
 
 
-      <Box position='relative' px={3} py={8}>
+      <Box position='relative' px={3} py={8} id='customerSection'>
         <Box textAlign='left'>
         <Typography variant='h6' color='#66CD0D'>TESTIMONIALS</Typography>
         </Box>
@@ -267,7 +268,7 @@ export default function HomePage() {
       </Box>
 
  
-        <Box position='relative' px={{lg:8 , md:6 , sm:5 , xs:2}} py={8}>
+        <Box position='relative' px={{lg:8 , md:6 , sm:5 , xs:2}} py={8}  id='blogSection'>
           <Box className='newsletterCard'>
           <Grid container justifyContent='space-between' alignContent='center' alignItems='center'  px={{lg:4 , md:4 , sm:2, xs:1}} py={{lg:10, md:10, sm:8, xs:7}}>
           <Grid item xs={12} sm={12} md={5} lg={5} display='flex' justifyContent='center' mb={{lg:0 , md:0, sm:2 , xs: 2}}>
@@ -280,7 +281,23 @@ export default function HomePage() {
             </Stack>
             </Grid>
             <Grid item xs={12} sm={12} md={7} lg={7} display='flex' justifyContent='start'>
-              <TextField variant='standard' fullWidth placeholder='Enter Your Email Address' />
+              <TextField variant='standard'         
+              
+                sx={{
+                  '& label.Mui-focused': {
+                    color: '#66CD0D', // Customize label color when focused
+                  },
+                  '& .MuiInput-underline:after': {
+                    borderBottomColor: '#66CD0D', // Customize underline color when focused
+                  },
+                }}
+                InputProps={{
+                  sx: {
+                    fontSize: '21px', // Customize font size
+                  },
+                }}
+               fullWidth 
+               placeholder='Enter Your Email Address' />
             </Grid>
             </Grid>
            </Box>
