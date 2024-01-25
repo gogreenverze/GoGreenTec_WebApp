@@ -37,12 +37,12 @@ export default function Footer() {
           <ul style={{listStyle:'none' , display:'flex' , flexDirection:'column', gap:'10px'}}>
            <Typography variant="h3" color="#66CD0D" fontWeight={500} fontSize={21} marginBottom='20px'>Contact Us</Typography>
             <li><Typography fontSize={17} color='#fff'>Email</Typography></li>     
-            <li><Typography fontSize={15} color='#798DA3'>support@GogreenTec.in</Typography></li>  
-            <li><Typography fontSize={15} color='#798DA3'>www.GoGreenTec.in</Typography></li>
+            <li><Typography fontSize={15} color='#798DA3'>support@gogreenverz.in</Typography></li>  
+            <li><Typography fontSize={15} color='#798DA3'>www.gogreenverz.in</Typography></li>
             <li><Typography fontSize={17} color='#fff'>Address</Typography></li>                     
-            <li><Typography fontSize={15} color='#798DA3'>21/1223B, Main Road,</Typography></li>  
-            <li><Typography fontSize={15} color='#798DA3'>Madhaurvoyal</Typography></li> 
-            <li><Typography fontSize={15} color='#798DA3'>Chennai, India - 6000028</Typography></li> 
+            <li><Typography fontSize={15} color='#798DA3'>2/123B, Main Road,</Typography></li>  
+            <li><Typography fontSize={15} color='#798DA3'>Sethirabalapuram,</Typography></li> 
+            <li><Typography fontSize={15} color='#798DA3'>Mayiladuthurai, India-609806</Typography></li> 
             </ul>
           </Grid>    
 
@@ -52,7 +52,7 @@ export default function Footer() {
           <Typography variant="h3" color="#66CD0D"  fontWeight={500} fontSize={21}  marginBottom='20px'>Support</Typography>
           <li><Link onClick={()=>navigate('/')} underline="none" sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Terms Of Use</Typography></Link></li>
           <li><Link onClick={()=>navigate('/')}  underline="none" sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Privacy</Typography></Link></li>           
-          <li><Link onClick={() => smoothScrollTo("contactSection")} underline="none"  sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Contact</Typography></Link></li>           
+          <li><Link onClick={() => smoothScrollTo("QuoteSection")} underline="none"  sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>Contact</Typography></Link></li>           
           <li><Link  onClick={()=>navigate('/')} underline="none"  sx={{cursor:'pointer'}}><Typography color='#798DA3' fontSize={17}>FAQ</Typography></Link></li>           
           </ul>
 
@@ -74,7 +74,9 @@ export default function Footer() {
 
           </Box>
     
-        
+          
+
+
    
 
         <Grid container mt={{lg:5 , md:5, sm:3 , xs:2}} p={1} spacing={2}>

@@ -32,6 +32,17 @@ const CustomTextField = ({
         label={label}
         fullWidth
         variant="outlined"
+        sx={{
+            '& label': {
+              color: '#fff', // Customize label color when focused
+            },
+            '& label.Mui-focused': {
+                color: '#66CD0D', // Customize label color when focused
+              },
+            '& .MuiInput-underline:after': {
+              borderBottomColor: '#66CD0D', // Customize underline color when focused
+            },
+          }}
         type="text"
         autoComplete="off"
         error={error}
