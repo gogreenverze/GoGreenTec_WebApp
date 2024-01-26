@@ -5,9 +5,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: Gilroy-Medium;
+  src: url(./Components/Fonts/Gilroy-Medium.ttf);
+}
+
+@font-face {
+  font-family: Futura-Bold-font;
+  src: url(./Components/Futura/Futura-Bold-font.ttf);
+}
+
+@font-face {
+  font-family: Futura-Light-font;
+  src: url(./Components/Futura/futura-medium-bt.ttf);
+}
+
+a p h1 h2 h3 h4 h5 h6 {
+  font-family: Futura-Light-font !important;
 }

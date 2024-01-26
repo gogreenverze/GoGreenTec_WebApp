@@ -106,8 +106,8 @@ export default function Header() {
 				<a onClick={() => smoothScrollTo("aboutSection")}>About</a>
 				<a onClick={() => smoothScrollTo("serviceSection")}>Services</a>
 				<a onClick={() => smoothScrollTo("profileSection")}>Portfolio</a>
-				<a onClick={() => smoothScrollTo("blogSection")}>Blog</a>
 				<a onClick={() => smoothScrollTo("QuoteSection")}>Contact</a>
+				<a onClick={() => smoothScrollTo("blogSection")}>Blog</a>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>

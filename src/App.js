@@ -9,7 +9,7 @@ function App() {
   const theme = createTheme({
     typography: {
       fontFamily: [
-        'Gilroy-Medium'
+        'Futura-Light-font'
       ].join(','),
       h6: {
         color: '#66CD0D',
@@ -41,7 +41,7 @@ function App() {
     },
     Link: {
       fontFamily: [
-        'Gilroy-Medium'
+        'Futura-Light-font'
       ].join(','),
     },
   });

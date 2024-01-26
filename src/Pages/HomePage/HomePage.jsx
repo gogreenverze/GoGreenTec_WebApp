@@ -16,8 +16,8 @@ import testimage from '../../Assets/testi_avatar02.png';
 import Footer from '../../Components/Footer/Footer';
 import BannerVideo from '../../Assets/GGV Website Cover TOP.mp4';
 import CustomTextField from '../../Components/CustomTextField';
-
-
+import BgVideo from '../../Assets/videoBg.mp4';
+import EastSharpIcon from '@mui/icons-material/EastSharp';
 
 export default function HomePage() {
 
@@ -140,7 +140,7 @@ export default function HomePage() {
             </Box>
           </Box>
           <Box mt={1}>
-            <Typography variant="p" color='#fff' fontWeight={500} fontSize="16px" lineHeight={1.2}>
+            <Typography variant="subtitle1" color='#fff' fontWeight={500} fontSize="17px" lineHeight={1.2}>
               {i.content}
             </Typography>
           </Box>
@@ -173,14 +173,28 @@ export default function HomePage() {
       <Box className='Banner' position='relative' id='homeSection' data-section="homeSection" >
       <Header />
 
-      <Box className='bannerText' >
+      {/* <Box className='bannerText' >
         <Typography variant='h3'>Elevate Your Digital Presence with GoGreenVerz</Typography>
         <Typography variant='h6'>Tech Innovations Shaping a Sustainable Future</Typography>
-      </Box>
+      </Box> */}
+
+    <div className="video-background-banner">
+    <video autoPlay loop muted playsInline className='back-video'>
+    <source src={BannerVideo} type="video/mp4" />
+    Your browser does not support the video tag.
+    </video>
+    <div className="content-overlay">
+    {/* Your content goes here */}
+    </div>
+    </div>
+
       </Box>
 
+
+
+
       <Box position='relative' px={3} py={4} id='aboutSection' data-section="aboutSection" >
-        <Grid container>
+        <Grid container display='flex' justifyContent='space-between' alignContent='center' alignItems='center'>
           <Grid item xs={12} sm={12} md={6} lg={6}>
               <Stack direction='row'>
                 <Box>
@@ -200,11 +214,11 @@ export default function HomePage() {
             <Stack spacing={4}>
               <Typography variant='h6' color='#66CD0D'>OUR STORY</Typography>
               <Stack spacing={2}>
-              <Typography variant='subtitle1' color='#fff'>GoGreenVerz Tech Solutions pioneers the convergence of web2 and web3,
+              <Typography variant='h6' color='#fff'>GoGreenVerz Tech Solutions pioneers the convergence of web2 and web3,
                                 crafting hybrid solutions on multichain platforms. Your sustainable tech journey begins
                                 here.</Typography>
               
-              <Typography variant='subtitle1' color='#fff'>At GoGreenVerz Tech Solutions, we take pride in spearheading the transformation of
+              <Typography variant='h6' color='#fff'>At GoGreenVerz Tech Solutions, we take pride in spearheading the transformation of
                                 digital landscapes. Our dedicated suite of services seamlessly blends established web
                                 technologies with the latest advancements. Our core objective is to guide businesses through a
                                 progressive digital journey, facilitating the seamless transition of their applications and digital
@@ -214,7 +228,7 @@ export default function HomePage() {
                 <Typography variant='h6' color='#66CD0D'>
                 Why Choose Us?
               </Typography>
-              <Typography variant='subtitle1' color='#fff'>At GoGreenVerz, we merge cutting-edge AI design with environmental
+              <Typography variant='h6' color='#fff'>At GoGreenVerz, we merge cutting-edge AI design with environmental
               consciousness. Experience innovation, efficiency, and a commitment to a greener digital
               landscape.</Typography>
                 </Stack>
@@ -253,7 +267,7 @@ export default function HomePage() {
               <Box className='ServiceCard' p={2}>
               {i.icon}
               <Typography variant='h5' color='#66CD0D'>{i.title}</Typography>
-             <Typography color='#fff' variant='h6' fontSize='1.1rem'>{i.content}</Typography>
+             <Typography color='#fff' variant='h6' fontSize='1.2rem'>{i.content}</Typography>
               </Box>
            </Grid>
             )})
@@ -281,7 +295,7 @@ export default function HomePage() {
         </Button>
         </Box> */}
         </Box>
-        <Grid container spacing={{lg:3 , md:3 , sm:8 , xs:4}}  p={2} mt={2}>
+        <Grid container spacing={{lg:2 , md:3 , sm:8 , xs:4}}  p={2} mt={2}>
           {
             portfolioSection && portfolioSection.map((i, index)=>{
               return(
@@ -290,6 +304,7 @@ export default function HomePage() {
               <img src={i.image} alt='portfolio' style={{width:80 , height:80 , objectFit:'contain' , mixBlendMode:'difference'}} />
              <Typography variant='h5' color='#66CD0D'>{i.title}</Typography>
              <Typography color='#fff' variant='h6' fontSize='1.1rem'>{i.content}</Typography>
+             <Typography variant='h6' color='#66CD0D' sx={{cursor:'pointer'}}>View Website <EastSharpIcon sx={{verticalAlign:'middle'}} /></Typography>
               </Box>
            </Grid>
             )})
@@ -314,7 +329,7 @@ export default function HomePage() {
       </Box>
 
 
-      <Box position='relative' px={3} py={6}  id='QuoteSection' textAlign='left' data-section>
+      <Box position='relative' px={3} py={4}  id='QuoteSection' textAlign='left' data-section>
         <Box>
         <Typography variant='h6' color='#66CD0D' textTransform='uppercase'>Let's Build the Future Together</Typography>
         <Grid container mt={2} spacing={4} justifyContent='space-between'>
@@ -425,7 +440,7 @@ export default function HomePage() {
       </Box>
 
  
-        <Box position='relative' px={{lg:8 , md:6 , sm:5 , xs:2}} py={8}  id='blogSection' data-section>
+        <Box position='relative' px={{lg:8 , md:6 , sm:5 , xs:2}} py={6}  id='blogSection' data-section>
           <Box className='newsletterCard'>
           <Grid container justifyContent='space-between' alignContent='center' alignItems='center'  px={{lg:4 , md:4 , sm:2, xs:1.5}} py={{lg:10, md:10, sm:8, xs:7}}>
           <Grid item xs={12} sm={12} md={5} lg={5} display='flex' justifyContent='center' mb={{lg:0 , md:0, sm:2 , xs: 2}}>

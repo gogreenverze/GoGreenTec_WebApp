@@ -1,12 +1,12 @@
 
-.Banner{
+/* .Banner{
   width: 100%;
   height: 550px;
   background-image: url('../../Assets/banner-gogreen.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 
 .bannerText{
@@ -70,7 +70,7 @@
   }
 
   #slidernonScale{
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
 
   .newsletterCard{
@@ -135,4 +135,19 @@
   .OddGrid{
     transform: translateY(0);
   }
+  }
+
+
+  .video-background-banner {
+    width: 100%;
+    height: 82vh;
+    background-color: #000E19;
+  }
+  
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    position: absolute;
+    top: 0;
   }
