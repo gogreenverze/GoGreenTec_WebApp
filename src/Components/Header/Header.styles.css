@@ -21,6 +21,33 @@ header {
 	color: var(--textColor);
 }
 
+@media only screen and (min-width: 1024px) {
+
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 80px;
+		padding: 1rem 2rem;
+		color: var(--textColor);
+		position: sticky;
+		top: 0;
+		z-index: 10;
+		transition: background-color 0.3s ease; /* Add a smooth transition effect */
+	}
+
+	.header.sticky{
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color:#000E19;; 
+		z-index: 1000; 
+		width: 100%;
+		transition: background-color 0.3s ease; 
+	}
+}
+
+
 nav a {
 	margin: 0 1.5rem;
 	color: var(--textColor);
@@ -33,7 +60,7 @@ nav a:hover {
 	color: var(--secondaryColor);
 }
 
-header .nav-btn {
+.header .nav-btn {
 	padding: 5px;
 	cursor: pointer;
 	background: transparent;
@@ -45,19 +72,19 @@ header .nav-btn {
 	font-size: 1.8rem;
 }
 
-header div,
+.header div,
 nav {
 	display: flex;
 	align-items: center;
 }
 
-@media only screen and (max-width: 1024px) {
-	header .nav-btn {
+@media only screen and (max-width: 1023px) {
+	.header .nav-btn {
 		visibility: visible;
 		opacity: 1;
 	}
 
-	header nav {
+	.header nav {
 		position: fixed;
 		top: -100vh;
 		left: 0;
@@ -73,7 +100,7 @@ nav {
 		z-index: 99;
 	}
 
-	header .responsive_nav {
+	.header .responsive_nav {
 		transform: translateY(100vh);
 	}
 
